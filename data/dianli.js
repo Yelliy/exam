@@ -1,5 +1,6 @@
-export const dianliQuestions = [
-     {
+function loadDianliQuestions() {
+    return [
+        {
             question: '晶闸管（SCR）导通的条件是：',
             options: ['阳极加正电压', '门极加触发脉冲', '阳极加正电压且门极加触发脉冲', '阴极加正电压'],
             correct: 2,
@@ -34,9 +35,5 @@ export const dianliQuestions = [
             category: 'dianli',
             explanation: '逆变器的作用是将直流电转换为交流电。'
         }
-
-
-        
-    
-    // ... 更多题目
-];
+    ];
+}
