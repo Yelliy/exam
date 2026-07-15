@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电气专业刷题题库</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>电气专业刷题题库</h1>
+        
+        <div class="settings">
+            <div class="setting-item">
+                <label>选择科目：</label>
+                <select id="subject-select">
+                    <option value="mixed">混合模式（每科随机）</option>
+                    <option value="dianlu">电路原理</option>
+                    <option value="dianji">电机学</option>
+                    <option value="dianli">电力电子技术</option>
+                    <option value="gaodianya">高电压技术</option>
+                    <option value="jidian">继电保护</option>
+                    <option value="xitong">电力系统分析</option>
+                    <option value="shebei">电气设备(发电厂)</option>
+                    <option value="nengli">一般能力</option>
+                </select>
+            </div>
+            
+            <div class="setting-item">
+                <label>题目数量：</label>
+                <select id="count-select">
+                    <option value="5">5题</option>
+                    <option value="10">10题</option>
+                    <option value="20">20题</option>
+                    <option value="50">50题</option>
+                </select>
+            </div>
+            
+            <div class="setting-item">
+                <label>顺序做题：</label>
+                <input type="checkbox" id="order-checkbox" checked>
+            </div>
+            
+            <button id="start-btn">开始答题</button>
+        </div>
+        
+        <div class="subject-grid">
+            <div class="subject-card" data-subject="dianlu">电路原理</div>
+            <div class="subject-card" data-subject="dianji">电机学</div>
+            <div class="subject-card" data-subject="dianli">电力电子技术</div>
+            <div class="subject-card" data-subject="gaodianya">高电压技术</div>
+            <div class="subject-card" data-subject="jidian">继电保护</div>
+            <div class="subject-card" data-subject="xitong">电力系统分析</div>
+            <div class="subject-card" data-subject="shebei">电气设备</div>
+            <div class="subject-card" data-subject="nengli">一般能力</div>
+        </div>
+    </div>
+    
+    <script src="scripts/data.js"></script>
+    <script>
+        // 点击科目卡片快速选择
+        document.querySelectorAll('.subject-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.getElementById('subject-select').value = card.dataset.subject;
+            });
+        });
+        
+        // 开始答题
+        document.getElementById('start-btn').addEventListener('click', () => {
+            const subject = document.getElementById('subject-select').value;
+            const count = document.getElementById('count-select').value;
+            const order = document.getElementById('order-checkbox').checked;
+            
+            localStorage.setItem('quizSubject', subject);
+            localStorage.setItem('quizCount', count);
+            localStorage.setItem('quizOrder', order);
+            
+            window.location.href = 'quiz.html';
+        });
+    </script>
+</body>
+</html>
