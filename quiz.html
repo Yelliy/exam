@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答题页面</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container quiz-container">
+        <div class="quiz-header">
+            <div class="progress">
+                <span id="current-num">1</span> / <span id="total-num">10</span>
+            </div>
+            <div class="score" id="score">得分：0</div>
+            <button id="back-btn" class="back-btn">返回首页</button>
+        </div>
+        
+        <div class="question-container">
+            <div class="question-number">第 <span id="question-num">1</span> 题</div>
+            <div class="question-text" id="question-text"></div>
+            <div class="question-category" id="question-category"></div>
+        </div>
+        
+        <div class="options-container" id="options-container">
+            <!-- 选项会动态生成 -->
+        </div>
+        
+        <div class="feedback" id="feedback" style="display: none;">
+            <div class="feedback-content" id="feedback-content"></div>
+        </div>
+        
+        <div class="quiz-actions">
+            <button id="submit-btn" class="submit-btn">提交答案</button>
+            <button id="next-btn" class="next-btn" style="display: none;">下一题</button>
+        </div>
+    </div>
+    
+    <script src="scripts/data.js"></script>
+    <script src="scripts/quiz.js"></script>
+</body>
+</html>
