@@ -1,4 +1,4 @@
-export function loadDianliQuestions() {
+function loadDianliQuestions() {
     return [
         {
             question: '晶闸管（SCR）导通的条件是：',
