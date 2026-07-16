@@ -1,4 +1,4 @@
-export function loadDianjiQuestions() {
+function loadDianjiQuestions() {
     return [
         // 单选题1
         {
