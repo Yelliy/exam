@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>电气专业刷题题库</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <div class="container">
@@ -56,7 +56,20 @@
         </div>
     </div>
     
-    <script type="module" src="scripts/data.js"></script>
+    <!-- 第一步：加载所有科目题库（必须放在最前面） -->
+    <script src="./data/dianlu.js"></script>
+    <script src="./data/dianji.js"></script>
+    <script src="./data/dianli.js"></script>
+    <script src="./data/gaodianya.js"></script>
+    <script src="./data/jidian.js"></script>
+    <script src="./data/xitong.js"></script>
+    <script src="./data/shebei.js"></script>
+    <script src="./data/nengli.js"></script>
+    
+    <!-- 第二步：加载数据处理逻辑 -->
+    <script src="./scripts/data.js"></script>
+    
+    <!-- 页面内联交互逻辑 -->
     <script>
         // 点击科目卡片快速选择
         document.querySelectorAll('.subject-card').forEach(card => {
@@ -75,7 +88,7 @@
             localStorage.setItem('quizCount', count);
             localStorage.setItem('quizOrder', order);
             
-            window.location.href = 'quiz.html';
+            window.location.href = './quiz.html';
         });
     </script>
 </body>
