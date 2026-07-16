@@ -1,4 +1,4 @@
-function loadXitongQuestions() {
+export function loadXitongQuestions() {
     return [
         {
             question: '电力系统的频率主要由什么决定：',
