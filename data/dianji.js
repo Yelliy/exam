@@ -1,4 +1,4 @@
-function loadDianjiQuestions() {
+export function loadDianjiQuestions() {
     return [
         // 单选题1
         {
@@ -98,7 +98,7 @@ function loadDianjiQuestions() {
             options: [
                 '仅与负载性质有关',
                 '与负载性质、负载大小都有关',
-                '仅与短路电抗有关',
+                '仅与负载电抗有关',
                 '与负载系数无关'
             ],
             correct: 1,
