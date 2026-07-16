@@ -1,4 +1,4 @@
-export function loadDianluQuestions() {
+function loadDianluQuestions() {
     return [
         {
             question: '在直流电路中，电容元件相当于：',
