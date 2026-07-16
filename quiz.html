@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>答题页面</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <div class="container quiz-container">
@@ -36,8 +36,21 @@
         </div>
     </div>
 
-<script type="module" src="scripts/data.js"></script>
-<script type="module" src="scripts/quiz.js"></script>
+    <!-- 第一步：加载所有科目题库 -->
+    <script src="./data/dianlu.js"></script>
+    <script src="./data/dianji.js"></script>
+    <script src="./data/dianli.js"></script>
+    <script src="./data/gaodianya.js"></script>
+    <script src="./data/jidian.js"></script>
+    <script src="./data/xitong.js"></script>
+    <script src="./data/shebei.js"></script>
+    <script src="./data/nengli.js"></script>
+    
+    <!-- 第二步：加载数据处理逻辑 -->
+    <script src="./scripts/data.js"></script>
+    
+    <!-- 第三步：加载答题交互逻辑 -->
+    <script src="./scripts/quiz.js"></script>
  
 </body>
 </html>
