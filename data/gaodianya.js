@@ -1,4 +1,4 @@
-function loadGaodianyaQuestions() {
+export function loadGaodianyaQuestions() {
     return [
         {
             question: '绝缘材料的击穿电压是指：',
