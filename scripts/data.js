@@ -1,12 +1,4 @@
-import { loadDianluQuestions } from '../data/dianlu.js';
-import { loadDianjiQuestions } from '../data/dianji.js';
-import { loadDianliQuestions } from '../data/dianli.js';
-import { loadGaodianyaQuestions } from '../data/gaodianya.js';
-import { loadJidianQuestions } from '../data/jidian.js';
-import { loadXitongQuestions } from '../data/xitong.js';
-import { loadShebeiQuestions } from '../data/shebei.js';
-import { loadNengliQuestions } from '../data/nengli.js';
-
+// 已移除所有 import 语句，依赖全局加载的科目题库函数
 const subjectNames = {
     dianlu: '电路原理',
     dianji: '电机学',
@@ -59,4 +51,6 @@ function getQuestions(subject, count, ordered) {
     return questions;
 }
 
-export { subjectNames, allQuestions, getQuestions };
+window.subjectNames = subjectNames;
+window.allQuestions = allQuestions;
+window.getQuestions = getQuestions;
