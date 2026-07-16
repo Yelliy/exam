@@ -1,4 +1,4 @@
-export function loadNengliQuestions() {
+function loadNengliQuestions() {
     return [
         {
             question: '以下哪个是团队协作的核心要素：',
