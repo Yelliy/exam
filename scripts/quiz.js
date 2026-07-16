@@ -1,4 +1,4 @@
-import { subjectNames, allQuestions, getQuestions } from './data.js';
+
 
 let currentQuestions = [];
 let currentIndex = 0;
