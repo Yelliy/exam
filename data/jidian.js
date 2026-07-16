@@ -1,4 +1,4 @@
-function loadJidianQuestions() {
+export function loadJidianQuestions() {
     return [
         {
             question: '电流速断保护的特点是：',
