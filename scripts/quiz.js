@@ -1,3 +1,5 @@
+import { subjectNames, allQuestions, getQuestions } from './data.js';
+
 let currentQuestions = [];
 let currentIndex = 0;
 let score = 0;
