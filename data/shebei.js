@@ -1,4 +1,4 @@
-export function loadShebeiQuestions() {
+function loadShebeiQuestions() {
     return [
         {
             question: '断路器的作用是：',
